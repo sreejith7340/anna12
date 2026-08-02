@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Kuttapii ❤️</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- SEO Best Practices -->
+  <meta name="description" content="A premium romantic digital love letter and interactive playground made with infinite love by Ettay for Kuttapii.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS Stylesheets -->
+  <script type="module" crossorigin src="/assets/index-BzE3fIf_.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C0LLtljw.css">
+</head>
+<body>
+
+  <!-- Loading Animation Overlay -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-heart">❤️</div>
+    <div class="loader-text">Loading Ettay's Heart...</div>
+  </div>
+
+  <!-- Interactive Background Canvas Layers -->
+  <canvas id="effect-canvas" class="canvas-bg"></canvas>
+  <div id="starry-sky" class="canvas-bg" style="display: none;"></div>
+
+  <!-- Welcome / Landing Hero Section -->
+  <div id="welcome-hero" class="welcome-hero">
+    <h1 class="welcome-title">Welcome, Kuttapii ❤️</h1>
+    <p class="welcome-subtitle">Every page of this website is a small piece of my heart.</p>
+    <button id="open-heart-btn" class="open-heart-btn">
+      Open My Heart <i class="fas fa-heart"></i>
+    </button>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- Main Website Container -->
+  <div class="app-container">
+
+    <!-- Top Sticky Header Navigation -->
+    <header class="navbar">
+      <a href="#home" class="nav-logo">Kuttapii <span class="hidden-love-note-trigger">🌸</span> Ettay</a>
+      
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#letter">Love Letter</a></li>
+          <li><a href="#why-love">Why I Love You</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#motivation">Motivation</a></li>
+          <li><a href="#promises">Promises</a></li>
+          <li><a href="#dreams">Dreams</a></li>
+          <li><a href="#secret">Secret Surprise</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Side-Controls -->
+      <div class="nav-controls">
+        <button id="theme-toggle" class="ctrl-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="music-toggle" class="ctrl-btn" title="Toggle Music" aria-label="Toggle Music">
+          <i class="fas fa-volume-mute"></i>
+        </button>
+        <div id="menu-toggle" class="menu-toggle" aria-label="Open Mobile Menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Sidebar Navigation -->
+    <div id="mobile-backdrop" class="mobile-backdrop"></div>
+    <div id="mobile-nav-panel" class="mobile-nav-panel">
+      <div id="mobile-nav-close" class="mobile-nav-close">
+        <i class="fas fa-times"></i>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#letter">Love Letter</a></li>
+        <li><a href="#why-love">Why I Love You</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#motivation">Motivation</a></li>
+        <li><a href="#promises">Promises</a></li>
+        <li><a href="#dreams">Dreams</a></li>
+        <li><a href="#secret">Secret Surprise</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Dynamic Content Sections (SPA Style) -->
+    <main class="content-area">
+
+      <!-- SECTION 1: HOME -->
+      <section id="home-section" class="page-section active">
+        <div class="home-hero">
+          <div class="home-avatar-container">
+            <div class="avatar-wrapper">
+              <img src="/images/kuttapii_portrait.jpg" alt="Kuttapii Portrait">
+            </div>
+            <div class="avatar-connector-hearts">
+              <span class="avatar-heart-connector">❤️</span>
+            </div>
+            <div class="avatar-wrapper">
+              <img src="/images/ettay_portrait.jpg" alt="Ettay Portrait">
+            </div>
+          </div>
+          <h2 class="home-greet">Hi Kuttapii ❤️</h2>
+          <p class="home-desc">This isn't just a website. It's a little world built only for you.</p>
+
+        </div>
+      </section>
+
+      <!-- SECTION 2: LOVE LETTER -->
+      <section id="letter-section" class="page-section">
+        <h2 class="section-title">A Love Letter</h2>
+        <div class="letter-container">
+          <!-- Clickable Envelope -->
+          <div id="letter-envelope" class="envelope-wrapper">
+            <div class="envelope-seal">💌</div>
+            <p class="envelope-label">Click to open Ettay's letter</p>
+          </div>
+          <!-- Typewriter Paper -->
+          <div id="letter-paper" class="letter-paper">
+            <div id="letter-text" class="letter-content"></div>
+            <div id="letter-signature" class="letter-signature">Forever Yours, Ettay ❤️</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: WHY I LOVE YOU -->
+      <section id="why-love-section" class="page-section">
+        <h2 class="section-title">Why I Love You</h2>
+        <div class="love-cards-grid">
+          <!-- Card 1 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front love-card-front-content">
+                <span>😊</span>
+                <h3>Your Smile</h3>
+              </div>
+              <div class="flip-card-back love-card-back-content">
+                <p>The way your eyes light up and the warmth of your smile can instantly turn my hardest days into pure joy. It's my favorite sight in the world.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front love-card-front-content">
+                <span>🌸</span>
+                <h3>Your Kindness</h3>
+              </div>
+              <div class="flip-card-back love-card-back-content">
+                <p>You have a gentle heart that cares so deeply for everyone. Your empathy and warmth make the entire world a softer, kinder place.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front love-card-front-content">
+                <span>💖</span>
+                <h3>Your Heart</h3>
+              </div>
+              <div class="flip-card-back love-card-back-content">
+                <p>Your loving soul is pure and beautiful. The way you embrace life and love with such sincerity makes me admire you more every day.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front love-card-front-content">
+                <span>🤝</span>
+                <h3>Your Support</h3>
+              </div>
+              <div class="flip-card-back love-card-back-content">
+                <p>You are my rock and constant partner. Knowing you believe in me gives me the strength to face any challenge that comes our way.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front love-card-front-content">
+                <span>😆</span>
+                <h3>Your Laugh</h3>
+              </div>
+              <div class="flip-card-back love-card-back-content">
+                <p>Your laugh is the sweetest music to my ears. It's contagiously happy and can lift my spirits in an instant.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front love-card-front-content">
+                <span>✨</span>
+                <h3>Everything About You</h3>
+              </div>
+              <div class="flip-card-back love-card-back-content">
+                <p>From your cute quirks to your brilliant mind, from your quiet strength to your playful jokes—I love every single piece of you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: GALLERY -->
+      <section id="gallery-section" class="page-section">
+        <h2 class="section-title">Our Gallery</h2>
+        <div class="gallery-grid">
+          <!-- Polaroid 1 -->
+          <div class="polaroid-card">
+            <div class="polaroid-image-container">
+              <img src="/images/starry_night.png" alt="Starry Night Together">
+            </div>
+            <div class="polaroid-caption">Under the Stars</div>
+          </div>
+          <!-- Polaroid 2 -->
+          <div class="polaroid-card">
+            <div class="polaroid-image-container">
+              <img src="/images/travel.png" alt="Traveling Dreams">
+            </div>
+            <div class="polaroid-caption">Adventures Await</div>
+          </div>
+          <!-- Polaroid 3 -->
+          <div class="polaroid-card">
+            <div class="polaroid-image-container">
+              <img src="/images/kuttapii_portrait.jpg" alt="Kuttapii Portrait">
+            </div>
+            <div class="polaroid-caption">My Beautiful Girl</div>
+          </div>
+          <!-- Polaroid 4 -->
+          <div class="polaroid-card">
+            <div class="polaroid-image-container">
+              <img src="/images/ettay_portrait.jpg" alt="Ettay Portrait">
+            </div>
+            <div class="polaroid-caption">Forever Yours</div>
+          </div>
+          <!-- Polaroid 5 -->
+          <div class="polaroid-card">
+            <div class="polaroid-image-container">
+              <img src="/images/movie.png" alt="Cozy Movie Night">
+            </div>
+            <div class="polaroid-caption">Cozy Nights In</div>
+          </div>
+          <!-- Polaroid 6 -->
+          <div class="polaroid-card">
+            <div class="polaroid-image-container">
+              <img src="/images/cooking.png" alt="Cooking Together">
+            </div>
+            <div class="polaroid-caption">Laughs & Recipes</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: MINI GAMES -->
+      <section id="games-section" class="page-section">
+        <h2 class="section-title">Play With My Heart</h2>
+        
+        <div class="games-hub">
+          <!-- Games Sub-Navigator -->
+          <nav class="games-nav">
+            <button class="game-select-btn active" data-game="catch">Catch Hearts</button>
+            <button class="game-select-btn" data-game="memory">Love Memory</button>
+            <button class="game-select-btn" data-game="quiz">Love Quiz</button>
+            <button class="game-select-btn" data-game="kiss">Kiss Counter</button>
+            <button class="game-select-btn" data-game="puzzle">Heart Puzzle</button>
+          </nav>
+
+          <!-- Display Box for Active Game -->
+          <div class="game-display-area glass-card">
+            
+            <!-- Game 1: Catch My Heart -->
+            <div id="game-catch" class="game-panel active">
+              <h3 class="game-title">Catch My Heart</h3>
+              <p style="margin-bottom: 1.5rem; text-align: center; font-size: 0.95rem; color: var(--text-secondary);">
+                Move the basket left and right to catch 10 falling hearts!
+              </p>
+              <div class="catch-game-container">
+                <div class="game-score-overlay">Score: <span id="catch-score-val">0</span>/10</div>
+                <div class="catch-basket"></div>
+                <div class="game-result-overlay">
+                  <div class="game-result-msg">"You've always had my heart. ❤️"</div>
+                  <button class="game-reset-btn passcode-btn">Play Again</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Game 2: Love Memory -->
+            <div id="game-memory" class="game-panel">
+              <h3 class="game-title">Love Memory Game</h3>
+              <p style="margin-bottom: 1.5rem; text-align: center; font-size: 0.95rem; color: var(--text-secondary);">
+                Match all the cards to reveal the symbols of our love.
+              </p>
+              <div class="memory-grid"></div>
+              <div class="game-result-overlay">
+                <div class="game-result-msg">"You complete me. We make a perfect pair! 💖"</div>
+                <button class="game-reset-btn passcode-btn">Play Again</button>
+              </div>
+            </div>
+
+            <!-- Game 3: Love Quiz -->
+            <div id="game-quiz" class="game-panel">
+              <h3 class="game-title">Love Quiz</h3>
+              <div class="quiz-card">
+                <div class="quiz-progress">Question <span class="quiz-progress-val">1/3</span></div>
+                <div class="quiz-progress-bar">
+                  <div class="quiz-progress-fill"></div>
+                </div>
+                <div class="quiz-question"></div>
+                <div class="quiz-options"></div>
+              </div>
+              <div class="game-result-overlay">
+                <div class="game-result-msg">"You passed with flying colors! Ettay's heart is 100% yours. ❤️"</div>
+                <button class="game-reset-btn passcode-btn">Retake Quiz</button>
+              </div>
+            </div>
+
+            <!-- Game 4: Kiss Counter -->
+            <div id="game-kiss" class="game-panel">
+              <h3 class="game-title">Kiss Counter</h3>
+              <p style="margin-bottom: 1.5rem; text-align: center; font-size: 0.95rem; color: var(--text-secondary);">
+                Tap the button to send Ettay kisses!
+              </p>
+              <div class="kiss-container">
+                <button class="kiss-btn">💋</button>
+                <div class="kiss-count-text">Kisses Sent: <span class="kiss-count-val">0</span></div>
+                <div class="kiss-milestone-text"></div>
+              </div>
+              <div style="margin-top: 1.5rem; text-align: center;">
+                <button class="game-reset-btn passcode-btn" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Reset Kisses</button>
+              </div>
+            </div>
+
+            <!-- Game 5: Heart Puzzle -->
+            <div id="game-puzzle" class="game-panel">
+              <h3 class="game-title">Heart Jigsaw Puzzle</h3>
+              <p style="margin-bottom: 1.5rem; text-align: center; font-size: 0.95rem; color: var(--text-secondary);">
+                Click tiles adjacent to the empty slot to slide them and complete the picture.
+              </p>
+              <div class="puzzle-grid"></div>
+              <div class="game-result-overlay">
+                <div class="game-result-msg">"Every piece of my life falls into place with you. ❤️"</div>
+                <button class="game-reset-btn passcode-btn">Play Again</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: RELATIONSHIP TIMELINE -->
+      <section id="timeline-section" class="page-section">
+        <h2 class="section-title">Our Timeline</h2>
+        <div class="timeline-container">
+          <div class="timeline-line">
+            <div id="timeline-progress" class="timeline-progress"></div>
+          </div>
+
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-date">The Day We Met</div>
+              <h3>A Spark In Time</h3>
+              <p>The universe aligned and introduced us. It felt like the start of something beautiful and completely unexpected.</p>
+            </div>
+          </div>
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-date">First Conversation</div>
+              <h3>Hours Talking</h3>
+              <p>Where typing felt like breathing and hours flew past in minutes. We shared stories, laughed, and realized how much we clicked.</p>
+            </div>
+          </div>
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-date">First Smile</div>
+              <h3>Falling Completely</h3>
+              <p>The moment Ettay saw your pure, genuine smile and realized his heart belonged to you forever.</p>
+            </div>
+          </div>
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-date">Beautiful Memories</div>
+              <h3>Our Shared Story</h3>
+              <p>From late night calls, cozy movie watch-alongs, to simple texts that make us happy, every step has built a strong bridge of love.</p>
+            </div>
+          </div>
+          <!-- Timeline Item 5 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-date">Today</div>
+              <h3>Stronger Than Ever</h3>
+              <p>Here we are, continuing to hold each other, growing through every season, and building a foundation of trust and respect.</p>
+            </div>
+          </div>
+          <!-- Timeline Item 6 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-date">Forever Together</div>
+              <h3>The Next Chapters</h3>
+              <p>No matter what coordinates of life we traverse, my promise remains absolute: side-by-side, forever and always.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: MOTIVATION -->
+      <section id="motivation-section" class="page-section">
+        <h2 class="section-title">Daily Motivation</h2>
+        <div class="motivation-container">
+          <div class="motivation-quote-card glass-card">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p id="quote-text" class="quote-text">"You are braver than you believe, stronger than you seem, and smarter than you think. But the most important thing is, even if we are apart, I'll always be with you."</p>
+            <span id="quote-author" class="quote-author">— A.A. Milne</span>
+          </div>
+          
+          <div class="motivation-notes" style="margin-top: 3rem; color: var(--text-secondary);">
+            <p>Kuttapii, you are strong, incredibly capable, beautiful inside and out, and never alone. <span class="hidden-love-note-trigger" style="color:var(--accent);">⭐</span> Click on stars and flowers around the site to find hidden notes of support whenever you need a lift!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8: PROMISES -->
+      <section id="promises-section" class="page-section">
+        <h2 class="section-title">My Promises to You</h2>
+        <div class="promises-container glass-card">
+          <div class="promises-list">
+            <!-- Promise 1 -->
+            <div class="promise-item">
+              <div class="promise-checkbox"><i class="fas fa-check"></i></div>
+              <span class="promise-text">I promise to always respect and honor your choices.</span>
+            </div>
+            <!-- Promise 2 -->
+            <div class="promise-item">
+              <div class="promise-checkbox"><i class="fas fa-check"></i></div>
+              <span class="promise-text">I promise to support your dreams and stand behind you.</span>
+            </div>
+            <!-- Promise 3 -->
+            <div class="promise-item">
+              <div class="promise-checkbox"><i class="fas fa-check"></i></div>
+              <span class="promise-text">I promise to stand beside you in times of storm and sunshine.</span>
+            </div>
+            <!-- Promise 4 -->
+            <div class="promise-item">
+              <div class="promise-checkbox"><i class="fas fa-check"></i></div>
+              <span class="promise-text">I promise to always try my best to make you smile and laugh.</span>
+            </div>
+            <!-- Promise 5 -->
+            <div class="promise-item">
+              <div class="promise-checkbox"><i class="fas fa-check"></i></div>
+              <span class="promise-text">I promise to choose you, actively and devotedly, every single day.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 9: FUTURE DREAMS -->
+      <section id="dreams-section" class="page-section">
+        <h2 class="section-title">Our Future Dreams</h2>
+        <div class="dreams-grid">
+          <!-- Dream 1 -->
+          <div class="dream-card">
+            <div class="dream-illustration">
+              <img src="/images/travel.png" alt="Travel Together">
+            </div>
+            <h3>Travel Together</h3>
+            <p>Walking hand-in-hand down historic pathways, watching golden sunsets, and filling our passports with beautiful memories.</p>
+          </div>
+          <!-- Dream 2 -->
+          <div class="dream-card">
+            <div class="dream-illustration">
+              <img src="/images/movie.png" alt="Movie Nights">
+            </div>
+            <h3>Movie Nights</h3>
+            <p>Curled up on a comfy couch with popcorn, warm blankets, and our favorite series playing on lazy weekends.</p>
+          </div>
+          <!-- Dream 3 -->
+          <div class="dream-card">
+            <div class="dream-illustration">
+              <img src="/images/cooking.png" alt="Cooking Together">
+            </div>
+            <h3>Cooking Together</h3>
+            <p>Laughing through messy kitchen recipes, testing out baking experiments, and dining together in quiet peace.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 10: SECRET SURPRISE -->
+      <section id="secret-section" class="page-section">
+        <h2 class="section-title">Secret Surprise</h2>
+        
+        <!-- Lockbox Interface -->
+        <div id="secret-lockbox" class="secret-lockbox glass-card">
+          <div class="lock-icon"><i class="fas fa-lock"></i></div>
+          <p style="margin-bottom: 2rem; color: var(--text-secondary);">This page is locked with a secret passcode. Only Sreejith's absolute favorite person can open it.</p>
+          <form id="passcode-form" class="passcode-form">
+            <input type="password" id="passcode-input" class="passcode-input" placeholder="Enter password..." autocomplete="off">
+            <button type="submit" class="passcode-btn">Unlock Surprise</button>
+          </form>
+        </div>
+
+        <!-- Revealed Surprise Content -->
+        <div id="secret-revealed-container" class="secret-revealed-container">
+          <div id="magical-heart" class="magical-heart">❤️</div>
+          <p class="secret-msg glass-card">
+            "No matter where life takes us, you will always be my favorite chapter.<br>
+            I love you forever, Kuttapii. ❤️"
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Polaroid Lightbox Overlay Modal -->
+    <div id="lightbox" class="lightbox">
+      <div class="lightbox-content">
+        <div class="lightbox-close"><i class="fas fa-times"></i></div>
+        <img class="lightbox-img" src="" alt="Lightbox View">
+        <div class="lightbox-caption">Caption</div>
+      </div>
+    </div>
+
+    <!-- Elegant Romantic Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <h3>Made with infinite love ❤️</h3>
+        <p>By Ettay &bull; For Kuttapii &bull; Forever.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Main JavaScript Mount -->
+</body>
+</html>
