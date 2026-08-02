@@ -1,0 +1,243 @@
+/* Sakura Blossom Falling Keyframes */
+@keyframes sakuraFall {
+  0% {
+    transform: translateY(-10%) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(110vh) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Floating Hearts Keyframes */
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-105vh) scale(1.2) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Typewriter Cursor Blinking */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent); }
+}
+
+/* Floating Elements Drift (Parallax Ambient) */
+@keyframes floatDrift {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* Heartbeat Pulsing */
+@keyframes heartBeat {
+  0% { transform: scale(1); filter: drop-shadow(0 0 5px var(--accent-glow)); }
+  14% { transform: scale(1.12); filter: drop-shadow(0 0 15px var(--accent-glow)); }
+  28% { transform: scale(1); filter: drop-shadow(0 0 5px var(--accent-glow)); }
+  42% { transform: scale(1.12); filter: drop-shadow(0 0 15px var(--accent-glow)); }
+  70% { transform: scale(1); filter: drop-shadow(0 0 5px var(--accent-glow)); }
+}
+
+/* Card 3D Flip Transitions */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 20px;
+}
+
+.flip-card-front {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+}
+
+.flip-card-back {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  transform: rotateY(180deg);
+}
+
+/* Sparkle Trailing Effect */
+.sparkle-particle {
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(circle, #fff 20%, var(--accent) 70%, transparent 100%);
+  border-radius: 50%;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  animation: sparkleScale 0.8s forwards ease-out;
+}
+
+@keyframes sparkleScale {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Shimmer Star effect for Starry Night Theme */
+@keyframes starShimmer {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.starry-star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: starShimmer 3s infinite ease-in-out;
+}
+
+/* Slide in drawer for Mobile Navigation */
+.mobile-nav-panel {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 280px;
+  height: 100vh;
+  background: var(--nav-bg);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-left: 1px solid var(--nav-border);
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: -10px 0 30px var(--glass-shadow);
+}
+
+.mobile-nav-panel.open {
+  right: 0;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.mobile-nav-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 101, 132, 0.1);
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
+  color: var(--accent);
+  padding-left: 0.5rem;
+}
+
+.mobile-nav-close {
+  align-self: flex-end;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav-close:hover {
+  transform: rotate(90deg) scale(1.1);
+  color: var(--accent);
+}
+
+.mobile-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 1400;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-backdrop.open {
+  display: block;
+  opacity: 1;
+}
+
+/* Floating cursor hearts */
+.trail-heart {
+  position: fixed;
+  font-size: 1.2rem;
+  pointer-events: none;
+  z-index: 10000;
+  animation: trailHeartFloat 1.2s forwards ease-out;
+  color: var(--accent);
+  transform: translate(-50%, -50%);
+}
+
+@keyframes trailHeartFloat {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-80px) rotate(45deg) scale(0.5);
+    opacity: 0;
+  }
+}
